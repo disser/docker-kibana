@@ -13,6 +13,8 @@ RUN \
 
 COPY run /etc/service/kibana/
 
+RUN /opt/elasticsearch/bin/plugin -install elasticsearch/elasticsearch-river-couchdb/1.2.0
+
 WORKDIR /opt/kibana
 
 EXPOSE 5601
